@@ -77,5 +77,5 @@ if(!token){
 
 function Call({ short }) {
  
-  return <div>{short}</div>;
+  return <div ><p style={{ textAlign: "center" }}>{short}</p></div>;
 }

@@ -101,7 +101,10 @@ function Short(){
     .then((mvs) => {console.log(mvs.url,"hi")
       window.location.replace(`${mvs.url}`) 
     })};
-    useEffect(getleads,[]);
+    // useEffect(getleads,[]);
+    useEffect(() => {
+      getleads()
+    }, [])
   
   return (
     <div className="Redirecting">

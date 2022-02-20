@@ -2,37 +2,59 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appbar{
+  display:flex;
+  flex-wrap:wrap;
+}
+li{
+  margin:10px;
+  list-style-type: none;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Login{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  height:50vh;
+  background-color:white;
+  border-radius: 10px;
+  border:1px rgb(129, 126, 126) solid;
+  box-shadow: 3px 3px 10px;
+  margin:40px;
+  width:fit-content;
+}
+.Loginbox{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+  flex-wrap:wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.outerLogin{
+  display:flex;
+  justify-content:center;
+  
+}
+
+.Redirecting{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  font-size: 200px;
 }
-
-.App-link {
-  color: #61dafb;
+.button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.url-shortener{
+  padding-right: 15px;
 }

@@ -92,7 +92,6 @@ function Logout() {
 function Short(){
   const {short}=useParams();
   console.log(short);
-  const [ourl,setourl]=useState("");
   const getleads=()=>{fetch("https://url-shortener-s.herokuapp.com/s", {
     method: "POST",
     body: JSON.stringify({short}),

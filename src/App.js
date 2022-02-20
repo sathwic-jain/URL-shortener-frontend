@@ -7,7 +7,7 @@ import './App.css';
 import { Url } from "./Url";
 import { Signup } from "./Signup";
 import { Activation } from "./Activation";
-import {Redirect, useParams,} from "react-router";
+import { useParams} from "react-router";
 
 function App() {
   const display = localStorage.getItem("token");

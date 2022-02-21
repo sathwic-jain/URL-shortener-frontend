@@ -41,6 +41,7 @@ export function All() {
           )})
           
 }
+    
        </table>
     </div>
   );

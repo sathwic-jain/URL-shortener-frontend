@@ -9,7 +9,7 @@ import './App.css';
 import { Url } from "./Url";
 import { Signup } from "./Signup";
 import { Activation } from "./Activation";
-import { useParams} from "react-router";
+import { useHistory, useParams} from "react-router";
 import { All } from "./All";
 
 function App() {
@@ -95,7 +95,9 @@ function Home(){
 
 function Logout() {
   localStorage.removeItem("token");
-  
+  const history=useHistory();
+  useEffect(()=>{history.push("/Login")
+  window.location.reload();});
   return (
     <div style={{textAlign:"center"}}>
       <h1>Login to continue.</h1>

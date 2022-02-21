@@ -2,7 +2,6 @@
 import {useState,useEffect} from "react";
 export function All() {
     const [url_data,setdata]=useState([]);
-    const [status,setStatus]=useState(0);
    const geturl=()=>{ fetch("https://url-shortener-s.herokuapp.com/all", {
         method: "GET"
       })
@@ -17,7 +16,7 @@ export function All() {
             console.log(url_data)
           });
    }
-   useEffect(geturl,[]);
+   useEffect(geturl);
   return (
     <div className="tabledisplay">
        Shortened URL LIST

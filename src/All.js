@@ -6,8 +6,7 @@ export function All() {
         method: "GET"
       })
         .then((response) => {
-          if (response.status === 401) setStatus(401);
-          else return response.json();
+         return response.json();
         })
         .then((data) => {
             console.log("hello");

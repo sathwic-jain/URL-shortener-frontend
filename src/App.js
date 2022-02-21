@@ -1,6 +1,8 @@
 import { Switch, Route, Link } from "react-router-dom";
 import {useEffect} from "react";
 import {Login} from "./Login.js"
+import {Forgot} from "./Forgot.js";
+import {Reset} from "./Reset.js";
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import './App.css';
@@ -8,6 +10,7 @@ import { Url } from "./Url";
 import { Signup } from "./Signup";
 import { Activation } from "./Activation";
 import { useParams} from "react-router";
+import { All } from "./All";
 
 function App() {
   const display = localStorage.getItem("token");
@@ -16,7 +19,7 @@ function App() {
   return (
    
     <div >
-       <AppBar position="static"> 
+       <AppBar position="static" className="bar_style"> 
       <ul className="appbar">
         <li>
           <Link to="/"><Button variant="text" style={{color:"white"}}>Home</Button></Link>
@@ -25,6 +28,9 @@ function App() {
           <div className="appbar">
             <li>
               <Link to="/url"><Button variant="text" style={{color:"white"}}>URL SHORTENER</Button></Link>
+            </li>
+            <li>
+              <Link to="/all"><Button variant="text" style={{color:"white"}}>URLs</Button></Link>
             </li>
             <li>
               <Link to="/logout"><Button variant="text" style={{color:"white"}}>Logout</Button></Link>
@@ -60,6 +66,15 @@ function App() {
         </Route>
         <Route exact path="/url">
           <Url />
+        </Route>
+        <Route exact path="/all">
+          <All />
+        </Route>
+        <Route exact path="/Reset/:resetid">
+          <Reset />
+        </Route>
+        <Route exact path="/Forgot">
+          <Forgot />
         </Route>
         <Route exact path="/logout">
           <Logout />
@@ -110,3 +125,5 @@ function Short(){
     </div>
   )
 }
+
+

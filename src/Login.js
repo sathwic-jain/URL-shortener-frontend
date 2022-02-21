@@ -70,6 +70,7 @@ export function Login() {
           >
             Login
           </Button>
+          <Button variant="contained" onClick={()=>history.push("/forgot")} style={{margin:15,marginBottom:20}}>Forgot password</Button>
           {status === 401 ? (
             <div>
               <p style={{ textAlign: "center" }}>
